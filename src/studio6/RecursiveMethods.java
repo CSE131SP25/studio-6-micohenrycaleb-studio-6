@@ -1,5 +1,7 @@
 package studio6;
 
+import java.awt.Color;
+
 import edu.princeton.cs.introcs.StdDraw;
 
 public class RecursiveMethods {
@@ -35,8 +37,10 @@ public class RecursiveMethods {
 	 * @param radiusMinimumDrawingThreshold radius above which drawing should occur
 	 */
 	public static void circlesUponCircles(double xCenter, double yCenter, double radius, double radiusMinimumDrawingThreshold) {
+		StdDraw.setPenColor(Color.BLACK);
+		if (radius>=radiusMinimumDrawingThreshold) {
 		StdDraw.circle(xCenter, yCenter, radius);
-		while (radius>radiusMinimumDrawingThreshold) {
+		StdDraw.pause(50);
 		//Bottom Circle
 		circlesUponCircles(xCenter,yCenter-radius, radius/3.0, radiusMinimumDrawingThreshold);
 		//top circle
@@ -56,11 +60,14 @@ public class RecursiveMethods {
 	 * @param array the array to create a reverse of, not to be mutated
 	 * @return an array with the same data as the input but it reverse order
 	 */
-	public static int[] toReversed(int[] array) {
+	public static int[] toReversed(int[] array1) {
 		
-			// FIXME create a helper method that can recursively reverse the given array
 			return new int[0];
 		
+	}
+	
+	public static int[] helperMethod(int[] array2) {
+		array2[]
 	}
 
 	/**
